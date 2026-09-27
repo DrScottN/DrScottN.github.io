@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scott Neville</title>
+  <style>
+    body { max-width: 900px; margin: 0 auto; padding: 2rem; font-family: Georgia, serif; line-height: 1.6; color: #222; }
+    h1,h2,h3 { font-family: Arial, Helvetica, sans-serif; }
+    .subtitle { color:#555; }
+    nav { margin: 1.5rem 0 2rem 0; }
+    nav a { margin-right: 1rem; }
+    a { color:#0057aa; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .profile { display:flex; gap:2rem; flex-wrap:wrap; align-items:flex-start; }
+    .profile img { width:220px; max-width:100%; border-radius:4px; }
+    section { margin-top:3rem; }
+    footer { margin-top:4rem; color:#666; font-size:.9rem; }
+    .project {margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 6px; padding: 0.5rem;}
+    .project summary {display: flex;align-items: center;gap: 0.75rem;cursor: pointer;font-weight: bold;}
+    .project-icon {width: 32px;height: 32px;object-fit: cover;}
+    .project-title {flex-grow: 1;}
+    .project-link {font-weight: normal;}
+    .project-content {margin-top: 1rem;}
+    .coauthors {margin-top: 0;}
+    .project-grid {display: grid;grid-template-columns: 200px 1fr;gap: 2rem;}
+    .project-artifacts {text-align: left;}
+    .project-description {text-align: left;}
+    @media (max-width: 700px) {.project-grid {grid-template-columns: 1fr;}}
+  </style>
+</head>
+<body>
+<header>
+  <h1 style="width:60%; display:inline">Scott Neville</h1> 
+  <div style="float:right">
+    <a href="mailto:nevilles@uoregon.edu">nevilles@uoregon.edu</a> <br>
+    <a href="mailto:nevilles@umich.edu">nevilles@umich.edu</a> <br>
+    <a href="mailto:dr.op.scott.n@gmail.com">dr.op.scott.n@gmail.com</a> <br>
+    Office: <a href="https://en.wikipedia.org/wiki/University_Hall_(University_of_Oregon)">University Hall</a> 309
+    </div>
+  <div style="width:70%"><nav>
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#education">Education</a>
+    <a href="#awards">Awards</a>
+    <a href="files/cv.pdf">CV</a>
+  </nav></div>
+  
+</header>
+<main>
+<section id="about">
+  <div class="profile">
+    <div style="width:40%;">
+      <p>I am a (1 year) RTG postdoctoral researcher at the University of Oregon. I completed my PhD in Mathematics at the University of Michigan under the supervision of Sergey Fomin.</p>
+      <p>My research interests include quiver mutation, combinatorics, theoretical machine learning, and most everything discrete and computational.</p>
+    </div>
+    <img src="images/ScottbyJanaUofU.jpg" alt="Scott Neville; photo credit to Jana Cunningham and the University of Utah communications team" style="float:right;width:50%">
+  </div>
+</section>
+<section id="research">
+    <h2>Research</h2>
+    Click a title for a summary, coauthor information, and additional artifacts.
+    <details class="project">
+        <summary>
+            <img class="project-icon" src=images/COQ.png alt="Icon of a cyclically ordered quiver and a (knot theory) link">
+            <span class="project-title"> Mutation invariants of (cyclically ordered) quivers</span>
+            <span class="project-link">
+            <a href=https://arxiv.org/abs/2409.17832>Paper</a>
+            </span>
+        </summary>
+
+        <div class="project-content">
+            <p class="coauthors">
+            <strong>Coauthor:</strong>
+            Sergey Fomin
+            </p>
+
+            <div class="project-grid">
+            <div class="project-artifacts">
+                <h4>Related Links</h4>
+                <ul>
+                <li><a href="https://www.sciencedirect.com/science/article/pii/S0001870826002811">[Fomin-Neville 2024] Advances of Mathematics publication</a></li>
+                <li><a href="https://arxiv.org/abs/2409.17832">[Neville 2024]</a> showing acyclic are totally proper.</li>
+                <li>[Neville-Thomas 2026+] showing skew-symmetrizable (in prep)</li>
+                <li><a href="files/COQslides.pdf">Slides</a></li>
+                <li><a href="https://github.com/DrScottN/quiver-mutation-database">Python code</a> for computing many mutation invariants, joint with Tucker Ervin</li>
+                </ul>
+            </div>
+            <div class="project-description">
+                <p>
+                A cyclically ordered quiver is a quiver endowed with an additional structure of a cyclic ordering of its vertices - one might imagine drawing the vertices of the quiver on the unit circle. This structure, which naturally arises in many important applications, gives rise to new powerful mutation (semi) invariants. The invariants we find are truly mutation invariants when the cyclic ordering is 'totally proper,' we describe several families of quivers with totally proper cyclic orderings. <br>
+
+                For quivers coming from divides, the most natural cyclic ordering leads to the Alexander polynomial of the associated knot. <br>
+
+                I resolved an important conjecture from this paper in the follow-up. I showed that all acyclic quivers are totally proper, and thus we have new necessary conditions for a quiver to be mutation equivalent to an acyclic one. This relies heavily on a construction by <a href=https://arxiv.org/abs/1201.4270>Ahmet Seven</a>. <br>
+
+                Additional follow-up, in preperation with Hugh Thomas, extended cyclically ordered quivers to skew-symmetrizable matrices. Preprint in preperation. <br>
+
+                With Tucker Ervin, I developed python code for many mutation invariants, including several from this project.
+                </p>
+    </div></div></div>
+    </details>
+    <details class="project">
+        <summary>
+        <img class="project-icon" src=images/LMC.png alt="Icon of a long mutation cycle with some branches coming out">
+        <span class="project-title"> Long Mutation Cycles</span>
+        <span class="project-link">
+        <a href=https://arxiv.org/pdf/2304.11505>Paper</a>
+        </span>
+    </summary>
+
+    <div class="project-content">
+        <p class="coauthors">
+        <strong>Coauthor:</strong>
+        Sergey Fomin
+        </p>
+
+        <div class="project-grid">
+        <div class="project-artifacts">
+            <h4>Related Links</h4>
+            <ul>
+            <li><a href=https://link.springer.com/article/10.1007/s00029-025-01090-1>Selecta Math Publication</a></li>
+            <li><a href=files/LMCslides.pdf>Slides</a></li>
+            <li><a href=https://arxiv.org/pdf/2504.06573>[Ervin-Neville 2025]</a> and <a href="https://link.springer.com/article/10.1007/s00026-026-00849-3">Annals of Combinatorics Publication</a></li>
+            </ul>
+        </div>
+        <div class="project-description">
+            <p>
+            This project studies mutation cycles in quivers.
+            We prove the existence of arbitrarily long cycles
+            on n vertices for every fixed n ≥ 4 and construct
+            large parameter families exhibiting strong rigidity
+            properties. <br>
+            Follow-up work with Tucker Ervin showed how this construction is part of a huge family of long mutation cycles, which can be formed by arbitrary triangular extensions of quivers with reddening sequences. This publication includes a large zoo of new, strange examples.
+            </p>
+    </div></div></div>
+    </details>
+    <details class="project">
+        <summary>
+            <img class="project-icon" src=images/Polymer.png alt="Icon of a big mess of strings stretched from bottom right to top left">
+            <span class="project-title">Directed Polymers</span>
+            <span class="project-link">
+            <a href=https://arxiv.org/abs/2402.12580>Paper</a>
+            </span>
+        </summary>
+
+        <div class="project-content">
+            <p class="coauthors">
+            <strong>Coauthors:</strong>
+            Arjun Krishnan, Sevak Mkrtchyan
+            </p>
+
+            <div class="project-grid">
+            <div class="project-artifacts">
+                <h4>Related Links</h4>
+                <ul>
+                <li><a href=https://link.springer.com/article/10.1007/s10959-026-01504-6>Journal of Theoretical Probability Publication</a></li>
+                <li><a href="https://github.com/arjunkc/busemann-code">Related github</a></li>
+                </ul>
+            </div>
+            <div class="project-description">
+                <p>
+                In the directed polymer model, we have two different kinds of randomness being played against each other. First, we have the environment, consisting of random weights on the points in a lattice, which we resample independently after each time step. Second, a random walk, which has some preferred distribution of next 'steps' on the lattice. The model produces a distribution on the possible resulting walks from the origin, where the walk is biased by the random environment based on a parameter (the temperature). <br>
+                In dimension 1, the directed polymer model is in the celebrated KPZ universality class, and for all positive temperatures, a typical polymer path shows non-Brownian KPZ scaling behavior. In dimensions 3 or larger, it is a classical fact that the polymer has two phases: Brownian behavior at high temperature, and non-Brownian behavior at low temperature. We consider the response of the polymer to an external field or tilt, and show that at fixed temperature, the polymer has Brownian behavior for some fields and non-Brownian behavior for others. In other words, the external field can induce the phase transition in the directed polymer model.
+                </p>
+    </div></div></div>
+    </details>
+    <details class="project">
+        <summary>
+        <img class="project-icon" src=images/NN.png alt="Icon of a simple NN">
+        <span class="project-title">(Not) explaining neural networks with symmetry</span>
+        <span class="project-link">
+        <a href=https://dl.acm.org/doi/abs/10.1016/j.tcs.2019.11.012>Paper</a>
+        </span>
+    </summary>
+
+    <div class="project-content">
+        <p class="coauthors">
+        <strong>Coauthors:</strong>
+        Suresh Venkatasubramanian, Danielle Ensign, and Arnab Paul
+        </p>
+
+        <div class="project-grid">
+        <div class="project-artifacts">
+            <h4>Related Links</h4>
+            <ul>
+            <li><a href=https://arxiv.org/abs/XXXX.XXXXX>Slides</a></li>
+            </ul>
+        </div>
+        <div class="project-description">
+            <p>
+            Neural networks often outperform intentionally designed programs for many 'real world' tasks. A natural question is if we can use a trained neural network to find a more classical algorithm in reasonable time. One theory was that neural networks work by extracting and removing invariants of the data. This begs a computational question: what are some transformations of the input data which do not change a neural networks output. We show this is generally infeasible, in the sense that determining if a neural network is invariant to some permutation of the inputs is NP-hard (even under loose definitions of invariant). 
+            </p>
+    </div></div></div>
+    </details>
+    
+</section>
+<section id="education">
+<h2>Education</h2>
+<ul>
+<li>PhD in Mathematics, University of Michigan</li>
+<li>Part III Mathematics, University of Cambridge</li>
+<li>BS in Mathematics and Computer Science, University of Utah</li>
+<li>Associate Degree, Weber State University</li>
+</ul>
+</section>
+<section id="awards">
+<h2>Awards and Honors</h2>
+<ul>
+<li>Rackham Predoctoral Fellowship</li>
+<li>Pat Shure Excellence in Teaching Award</li>
+<li>Edwin Wilkinson Miller Award</li>
+<li>Churchill Scholarship</li>
+</ul>
+</section>
+<section id="People Links">
+<h2>Links to others</h2>
+<h3>If you enjoy my work, you may like things from these folks! </h3>
+<ul>
+<li><a href="https://math.mit.edu/~amandabu/index.html">Amanda Burcroff</a></li>
+<li><a href="https://www.phylliida.dev/">Danielle Ensign</a></li>
+<li><a href="https://scholar.google.com/citations?user=Zv80Vn0AAAAJ&hl=en">Tucker Ervin</a></li>
+<li><a href="https://websites.umich.edu/~fomin/">Sergey Fomin</a> (see also the <a href="https://websites.umich.edu/~fomin/cluster.html">cluster algebras portal</a> he maintains)</li>
+<li><a href="https://mathematicleigh.com/">Leigh Foster</a></li>
+<li><a href="https://sites.google.com/view/monica-garcia-math">Monica Garcia</a></li>
+<li><a href="https://pages.uoregon.edu/plhersh/">Patricia Hersh</a></li>
+<li><a href="https://shirleyarjun.net/homepage/">Arjun Krishnan</a></li>
+<li><a href="https://sites.google.com/view/sevakmkrtchyan/">Sevak Mkrtchyan</a></li>
+<li><a href="https://sophie-rehberg.de/">Sophie Rehberg</a></li>
+<li><a href="https://sites.google.com/umich.edu/amandaschwartz/home">Amanda Schwartz</a></li>
+<li><a href="https://sites.google.com/view/jsimental">José Simental</a></li>
+<li><a href="https://hughrthomas.github.io/english.html">Hugh Thomas</a></li>
+<li><a href="http://blog.geomblog.org/">Suresh Venkatasubramanian</a></li>
+<li><a href="https://tianyi-math.github.io/">Tianyi Yu</a></li>
+</ul> (these links are quite likely to break; please let me know if you notice)
+</section>
+</main>
+<footer><p>Last updated September 2026.</p></footer>
+</body>
+</html>
