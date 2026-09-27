@@ -27,6 +27,12 @@
     .project-artifacts {text-align: left;}
     .project-description {text-align: left;}
     @media (max-width: 700px) {.project-grid {grid-template-columns: 1fr;}}
+    .misc-grid {display: grid;grid-template-columns: 1fr 1fr;gap: 1rem;}
+    .misc-card {border: 1px solid #ddd;border-radius: 6px;padding: 0.75rem;}
+    .misc-card summary {cursor: pointer;font-size: 0.85rem;color: #444;}
+    .misc-image {width: 100%;margin-top: 1rem;border-radius: 4px;}
+    .caption {font-size: 0.8rem;margin-top: 0.5rem;}
+    @media (max-width: 700px) {.misc-grid {grid-template-columns: 1fr;}}
   </style>
 </head>
 <body>
@@ -62,6 +68,36 @@
     Click a title for a summary, coauthor information, and additional artifacts.
     <details class="project">
         <summary>
+            <img class="project-icon" src=images/BROG.png alt="A cute bunny frog (BROG).">
+            <span class="project-title">Eventual sign coherence</span>
+            <span class="project-link">
+            <a href=https://arxiv.org/abs/2605.12865>Paper</a>
+            </span>
+        </summary>
+
+        <div class="project-content">
+            <p class="coauthors">
+            <strong>Coauthor:</strong>
+            Amanda Burcroff
+            </p>
+
+            <div class="project-grid">
+            <div class="project-artifacts">
+                <h4>Related Links</h4>
+                <ul>
+                <li><a href="files/ESCslides.pdf">Slides.</a></li>
+                <li><a href="https://arxiv.org/abs/1904.00971">[Gekhtman-Nakanishi 2019].</a> the paper which introduced the conjecture.</li>
+                </ul>
+            </div>
+            <div class="project-description">
+                <p>
+                We subsantially resolve the Asymptotic sign coherence conjecture of Gekhtman and Nakanishi, which states that if you take a quiver with frozen vertices and mutate long enough, then it will eventually satisfy the sign coherence phenomena (which states that each mutable vertex is either a source or a sink with respect to all of the frozen vertices).
+                We do this by introducing a new class of quivers, called BROG. We also resolve the asymptotic sign coherence conjecture for mutation abundant (always at least 2 arrows between the mutable vertices) 3-vertex quivers.
+                </p>
+    </div></div></div>
+    </details>
+    <details class="project">
+        <summary>
             <img class="project-icon" src=images/COQ.png alt="Icon of a cyclically ordered quiver and a (knot theory) link">
             <span class="project-title"> Mutation invariants of (cyclically ordered) quivers</span>
             <span class="project-link">
@@ -82,7 +118,7 @@
                 <li><a href="https://www.sciencedirect.com/science/article/pii/S0001870826002811">[Fomin-Neville 2024] Advances of Mathematics publication</a></li>
                 <li><a href="https://arxiv.org/abs/2409.17832">[Neville 2024]</a> showing acyclic are totally proper.</li>
                 <li>[Neville-Thomas 2026+] showing skew-symmetrizable (in prep)</li>
-                <li><a href="files/COQslides.pdf">Slides</a></li>
+                <li><a href="files/SMslides.pdf">Slides</a></li>
                 <li><a href="https://github.com/DrScottN/quiver-mutation-database">Python code</a> for computing many mutation invariants, joint with Tucker Ervin</li>
                 </ul>
             </div>
@@ -184,7 +220,7 @@
         <div class="project-artifacts">
             <h4>Related Links</h4>
             <ul>
-            <li><a href=https://arxiv.org/abs/XXXX.XXXXX>Slides</a></li>
+            <li><a href=files/ExplainNNslides.pdf>Slides</a></li>
             </ul>
         </div>
         <div class="project-description">
@@ -193,24 +229,62 @@
             </p>
     </div></div></div>
     </details>
-    
+    <details class="project">
+        <summary>
+        <img class="project-icon" src=images/partitionT.png alt="Icon of a simple NN">
+        <span class="project-title">m-ary partitions with m-ary constraints</span>
+        <span class="project-link">
+        <a href=https://ajc.maths.uq.edu.au/pdf/72/ajc_v72_p369.pdf>Paper</a>
+        </span>
+    </summary>
+
+    <div class="project-content">
+        <p class="coauthors">
+        <strong>Coauthors:</strong>
+        Timothy B. Flowers, James A. Sellers
+        </p>
+
+        <div class="project-grid">
+        <div class="project-artifacts">
+            <h4>Related Links</h4>
+            <ul>
+            <li><a href=https://ajc.maths.uq.edu.au/pdf/72/ajc_v72_p369.pdf>Australasian journal of combinatorics publication</a></li>
+            </ul>
+        </div>
+        <div class="project-description">
+            <p>
+            The 1983 Putnam competition included a problem which asked about the number of partitions with only 2^k parts (binary partitions) with each part used at most 3 (=2^2-1) times. We generalize this to m-ary partitions (so parts m^k) with each part used at most m^j -1 times. Generating functions are very up to this task, and reveal a cute symmetry. One can interchange the roles of k and j. We give a bijection to explain this symmetry, based on a classical transposition argument for partitions with bounded sizes vs bounded number of parts. (Color the boxes and read backwards!) <br>
+
+            Story: Timothy Flowers gave a short talk on the problem and generating function results at an AMS mathfest. I thought the problem fun, and found a bijection to explain their results over lunch.
+            </p>
+    </div></div></div>
+    </details>
+</section>
+<section id="Positions">
+<h2>Positions</h2>
+<ul>
+<li>RTG Postdoc, 2026-2027, <a href="https://naturalsciences.uoregon.edu/mathematics">University of Oregon</a>, mentored by Patricia Hersh</li>
+<li>Semester Postdoc 2026, <a href="https://lacim.uqam.ca/en/index.html">LACIM</a>, mentored by Hugh Thomas</li>
+<li>Semester Postdoc 2025, <a href="https://icerm.brown.edu/">ICERM</a>, mentored by José Simental</li>
+</ul>
 </section>
 <section id="education">
 <h2>Education</h2>
 <ul>
-<li>PhD in Mathematics, University of Michigan</li>
-<li>Part III Mathematics, University of Cambridge</li>
-<li>BS in Mathematics and Computer Science, University of Utah</li>
-<li>Associate Degree, Weber State University</li>
+<li>PhD in Mathematics, <a href="https://lsa.umich.edu/math">University of Michigan</a>, advised by Sergey Fomin</li>
+<li>Part III Mathematics, <a href="https://www.maths.cam.ac.uk/">University of Cambridge</a>, advised by Tom Fisher</li>
+<li>BS in <a href="https://www.math.utah.edu/">Mathematics</a> and <a href="https://www.cs.utah.edu/">Computer Science</a>, University of Utah, advised by Suresh Venkatasubramanian</li>
+<li>Associate Degree, <a href="https://www.weber.edu/">Weber State University</a></li>
 </ul>
 </section>
 <section id="awards">
 <h2>Awards and Honors</h2>
 <ul>
-<li>Rackham Predoctoral Fellowship</li>
-<li>Pat Shure Excellence in Teaching Award</li>
-<li>Edwin Wilkinson Miller Award</li>
-<li>Churchill Scholarship</li>
+<li><a href="https://lsa.umich.edu/math/about-us/department-history/sumner-b--myers.html">Sumner B. Myers Award</a> (Best thesis)</li>
+<li><a href="https://rackham.umich.edu/funding/rackham-predoctoral-fellowship-program/">Rackham Predoctoral Fellowship</a></li>
+<li><a href="https://lsa.umich.edu/math/graduates/StudentAwards/department-awards/teaching-awards.html">Pat Shure Excellence in Teaching Award</a></li>
+<li><a href="https://lsa.umich.edu/math/graduates/StudentAwards/department-awards.html">Edwin Wilkinson Miller Award</a></li>
+<li><a href="https://www.churchillscholarship.org/">Churchill Scholarship</a></li>
 </ul>
 </section>
 <section id="People Links">
@@ -233,6 +307,50 @@
 <li><a href="http://blog.geomblog.org/">Suresh Venkatasubramanian</a></li>
 <li><a href="https://tianyi-math.github.io/">Tianyi Yu</a></li>
 </ul> (these links are quite likely to break; please let me know if you notice)
+</section>
+
+<section id="misc">
+<h2>Miscellaneous</h2>
+<div class="misc-grid">
+<!-- Shoes joke -->
+<details class="misc-card">
+<summary>
+How I appear to extroverted mathematicians
+</summary>
+<img
+src="images/shoes.jpg"
+alt="Mathematics joke; a photo of my white shoes"
+class="misc-image">
+<p class="caption">
+"The difference between an introvert and extrovert mathematician is: An introvert mathematician looks at their shoes while talking to you. An extrovert mathematician looks at your shoes.  "
+</p>
+<p class="caption">
+Accessibility feature suggested by
+<a href="https://sites.google.com/umich.edu/lukas-scheiwiller/home">
+Lukas Scheiwiller
+</a>.
+</p>
+</details>
+<!-- Photo + quote -->
+<details class="misc-card">
+<summary>
+A photo that I own the rights to
+</summary>
+<img
+src="images/photoMe.jpg"
+alt="My face! Still wearing a trench coat."
+class="misc-image">
+<p class="caption" style="color:white">
+"They are really sleeping on you for that Field's medal"
+<br>
+— Olivia Strahan
+<br>
+"That was an amazing talk. You can tell Sergey I like your trench coat."
+<br>
+— Bruce Segan
+</p>
+</details>
+</div>
 </section>
 </main>
 <footer><p>Last updated September 2026.</p></footer>
